@@ -21,7 +21,7 @@ overflow-x:hidden;
 scroll-behavior:smooth;
 }
 
-/* AI Animated Grid Background */
+/* Background Grid */
 
 body::before{
 content:"";
@@ -54,8 +54,8 @@ border-radius:50%;
 animation:float 10s infinite ease-in-out;
 }
 
-.glow1{ top:5%; left:5%; }
-.glow2{ bottom:10%; right:10%; animation-delay:5s; }
+.glow1{top:5%;left:5%;}
+.glow2{bottom:10%;right:10%;animation-delay:5s;}
 
 @keyframes float{
 0%,100%{transform:translateY(0)}
@@ -73,14 +73,18 @@ background:rgba(0,0,0,0.7);
 backdrop-filter:blur(10px);
 }
 
-nav h2{ color:#00f5c4; }
+nav h2{
+color:#00f5c4;
+}
 
 nav ul{
 display:flex;
 list-style:none;
 }
 
-nav ul li{ margin-left:25px; }
+nav ul li{
+margin-left:25px;
+}
 
 nav ul li a{
 text-decoration:none;
@@ -99,9 +103,13 @@ text-align:center;
 padding:150px 20px;
 }
 
-.hero h1{ font-size:55px; }
+.hero h1{
+font-size:55px;
+}
 
-.hero span{ color:#00f5c4; }
+.hero span{
+color:#00f5c4;
+}
 
 .hero p{
 margin-top:15px;
@@ -116,7 +124,6 @@ border:none;
 border-radius:6px;
 font-weight:bold;
 cursor:pointer;
-transition:0.3s;
 }
 
 .hero button:hover{
@@ -159,12 +166,11 @@ transform:translateY(-12px);
 box-shadow:0 0 25px rgba(0,245,196,0.2);
 }
 
-/* Contact Section */
+/* Contact */
 
 .contact-container{
 display:flex;
 justify-content:center;
-align-items:center;
 margin-top:40px;
 }
 
@@ -178,12 +184,6 @@ backdrop-filter:blur(10px);
 box-shadow:0 0 25px rgba(0,245,196,0.15);
 }
 
-.contact-info{
-margin-bottom:20px;
-font-size:15px;
-opacity:0.9;
-}
-
 .contact-card input,
 .contact-card textarea{
 width:100%;
@@ -193,7 +193,6 @@ border:none;
 border-radius:6px;
 background:#111;
 color:white;
-outline:none;
 }
 
 .contact-card textarea{
@@ -208,10 +207,6 @@ border:none;
 border-radius:6px;
 font-weight:bold;
 cursor:pointer;
-}
-
-.contact-card button:hover{
-box-shadow:0 0 15px #00f5c4;
 }
 
 /* Footer */
@@ -304,17 +299,13 @@ businesses scale faster and automate repetitive work.
 
 <div class="contact-card">
 
-<div class="contact-info">
 <p>Email: hello@synthqs.com</p>
 <p>Phone: +91 9015044003</p>
-</div>
 
 <form>
 
 <input type="text" placeholder="Your Name" required>
-
 <input type="email" placeholder="Your Email" required>
-
 <textarea placeholder="Your Message" required></textarea>
 
 <button>Send Message</button>
