@@ -18,6 +18,7 @@ body{
 background:#050505;
 color:white;
 overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
 /* AI Animated Grid Background */
@@ -40,7 +41,7 @@ animation:gridMove 20s linear infinite;
 100%{transform:translate(40px,40px);}
 }
 
-/* Floating AI Glow */
+/* Floating Glow */
 
 .glow{
 position:absolute;
@@ -53,16 +54,8 @@ border-radius:50%;
 animation:float 10s infinite ease-in-out;
 }
 
-.glow1{
-top:5%;
-left:5%;
-}
-
-.glow2{
-bottom:10%;
-right:10%;
-animation-delay:5s;
-}
+.glow1{ top:5%; left:5%; }
+.glow2{ bottom:10%; right:10%; animation-delay:5s; }
 
 @keyframes float{
 0%,100%{transform:translateY(0)}
@@ -80,18 +73,14 @@ background:rgba(0,0,0,0.7);
 backdrop-filter:blur(10px);
 }
 
-nav h2{
-color:#00f5c4;
-}
+nav h2{ color:#00f5c4; }
 
 nav ul{
 display:flex;
 list-style:none;
 }
 
-nav ul li{
-margin-left:25px;
-}
+nav ul li{ margin-left:25px; }
 
 nav ul li a{
 text-decoration:none;
@@ -110,13 +99,9 @@ text-align:center;
 padding:150px 20px;
 }
 
-.hero h1{
-font-size:55px;
-}
+.hero h1{ font-size:55px; }
 
-.hero span{
-color:#00f5c4;
-}
+.hero span{ color:#00f5c4; }
 
 .hero p{
 margin-top:15px;
@@ -193,6 +178,12 @@ backdrop-filter:blur(10px);
 box-shadow:0 0 25px rgba(0,245,196,0.15);
 }
 
+.contact-info{
+margin-bottom:20px;
+font-size:15px;
+opacity:0.9;
+}
+
 .contact-card input,
 .contact-card textarea{
 width:100%;
@@ -203,12 +194,6 @@ border-radius:6px;
 background:#111;
 color:white;
 outline:none;
-transition:0.3s;
-}
-
-.contact-card input:focus,
-.contact-card textarea:focus{
-box-shadow:0 0 10px #00f5c4;
 }
 
 .contact-card textarea{
@@ -223,11 +208,9 @@ border:none;
 border-radius:6px;
 font-weight:bold;
 cursor:pointer;
-transition:0.3s;
 }
 
 .contact-card button:hover{
-transform:scale(1.05);
 box-shadow:0 0 15px #00f5c4;
 }
 
@@ -255,9 +238,9 @@ margin-top:50px;
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 
 </nav>
@@ -268,11 +251,11 @@ margin-top:50px;
 
 <p>Web Development • AI Automation • Chatbot Systems</p>
 
-<button>Start Project</button>
+<button onclick="scrollToContact()">Start Project</button>
 
 </div>
 
-<section>
+<section id="about">
 
 <h2>About Us</h2>
 
@@ -281,9 +264,14 @@ SynthQS creates modern websites and AI automation solutions that help
 businesses scale faster and automate repetitive work.
 </p>
 
+<br>
+
+<p>Email: hello@synthqs.com</p>
+<p>Phone: +91 9015044003</p>
+
 </section>
 
-<section>
+<section id="services">
 
 <h2>Services</h2>
 
@@ -308,13 +296,18 @@ businesses scale faster and automate repetitive work.
 
 </section>
 
-<section>
+<section id="contact">
 
 <h2>Contact Us</h2>
 
 <div class="contact-container">
 
 <div class="contact-card">
+
+<div class="contact-info">
+<p>Email: hello@synthqs.com</p>
+<p>Phone: +91 9015044003</p>
+</div>
 
 <form>
 
@@ -339,6 +332,16 @@ businesses scale faster and automate repetitive work.
 © 2026 SynthQS | AI Automation Agency
 
 </footer>
+
+<script>
+
+function scrollToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
 
 </body>
 </html>
